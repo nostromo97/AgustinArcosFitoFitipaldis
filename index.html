@@ -2,14 +2,16 @@
 <html lang="es">
 <style>
     div::first-letter {
-        font-size: 25px;
+        font-size: 30px;
+        font-family: Arial;
         font-weight: bold;
         font-style: italic;
-        font-family:Arial, Helvetica, sans-serif;
     }
-
+    div {
+        width: 20%;
+    }
     div:nth-of-type(2n) {
-        background: #D9D9D9;
+        background: rgb(168, 168, 168);
     }
 
     div:nth-of-type(2n+1) {
@@ -23,26 +25,55 @@
     div:nth-child(1n) {
         margin-bottom: 36px;
     }
-    p {
-        margin: 0;
-    }
-
-    div {
-        padding-left: 1%;
-        width: 25%;
-    }
-
     body {
         background-color: gray;
     }
+    #nombre{
+        color:bisque;
+    }
+    #grupo{
+        color:aliceblue;
+    }
+    #fuente{
+        color:red;
+        
+    }
+    .ventana{
+            background-color: rgba(55, 78, 153, 0.5);
+            transition: all 2s;
+            position:absolute;
+            pointer-events:none;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            opacity:0;
+        }
+
+        #modal:target{
+            opacity:1;
+            pointer-events:auto;
+        }
+
+        .contenido{
+            background-color:rgb(10, 139, 190);
+            position: relative;
+            width: 400px;
+            padding: 100px;
+            margin: 20%;
+           
+        }
+
 </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tito y Fitipaldis</title>
+    <title>Tito & Fitipaldis</title>
 </head>
 <body>
+        <p>Fito & Fitipaldis</p>
+        <p>_________________</p>
         <p>Soldadito Marinero</p>
 
     <div>
@@ -79,9 +110,22 @@
         <p>Después de un invierno malo</p>
     </div>
 
-    <p>Fuente: https://www.letras.com/fito-fitipaldis/614056/</p>
-    <p>Fito Fitipaldis</p>
-    <p>Agustín Arcos Reyes</p>
+    <a href="#modal">VENTANA MODAL</a>
+    <section id="modal" class="ventana">
+    <section class="contenido">
+        <span>
+            <a href="#">(x)</a>
+            <p id="nombre">Agustín Arcos Reyes. 1ºDAM</p>
+            <P>________________________</P>
+            <p id="grupo">Grupo: Fito & Fitipaldis</p>
+            <p id="fuente">Fuente: letras.com</p>
+            
+        </span>
+    </section>  
+    </section>
+    
+    
+    
 
 </body>
 </html>
